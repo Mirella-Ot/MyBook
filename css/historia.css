@@ -1,0 +1,296 @@
+/* header */
+
+body{
+    padding: 0%;
+    margin: 0%;
+    background-color: #f2ebbf;
+    
+}
+
+header{
+    height: 9vh;
+    border-bottom: 2px solid #f15e5e;
+    display: flex;
+    justify-content: space-between;
+    background-color: #f79a87;
+    color: #543633;
+}
+
+
+.div_nav{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.div_nav ul{
+    display: flex;
+    flex-direction: row;
+    gap:32px;
+    font-size: 18px;
+    list-style: none;
+    padding: 0%;
+}
+
+.div_nav div{
+
+    width: 700px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo{
+    width: 200px;
+    text-align: center;
+}
+
+.logo h1{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    height: 20px;
+    width: 500px;
+    padding-left: 15%;
+    color: #543633;
+}
+
+/* body */
+
+/* parte 1 */
+
+.slogan{
+    width: 100%;
+    height: 300px;
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 68px;
+    background-image: url(https://cdn.shopify.com/s/files/1/0305/4075/9177/products/papel-de-parede-texturizado-abstrato-tons-pasteis-alhambra-vc0502-681766.jpg?v=1643344795);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tempos_antigos{
+    height: 800px;
+    width: 100%;
+    border: 2px solid blue;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+
+.titulo1 {
+   height: 140px;
+   width: 100%;
+   /* border: 2px solid rgb(0, 0, 0); */
+   /* margin-top: 13%; */
+   margin-left: 15px;
+}
+
+.imagens-texto-1{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 35px;
+}
+.titulo1 span{
+    font-size: 38px;
+    margin-left: 170px;
+}
+
+.hr-1{
+    width: 12%;
+    margin-left: -5px;
+    margin-top: -19px;
+    
+}
+
+.hr-2{
+    width: 5%;
+    margin-left: -5px;
+    background-color: red;
+}
+
+.texto1 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+
+.texto1 p{
+    width: 35%;
+    font-size: 23px;
+}
+
+#linhaVertical{
+    height: 290px;
+    border-left: 2px solid rgb(0, 0, 0);
+}
+
+#img2{
+    margin-top: 40px;
+}
+
+.texto2 {
+    width: 100%;
+    height: 900px;
+    display: flex;
+    justify-content: end;
+    margin-top: 130px;
+    gap: 160px;
+}
+
+.texto2 img{
+    margin-right: 220px;
+    width: 240px;
+    height: 315px;
+    border-radius: 10%;
+}
+
+.texto2 p {
+    width: 540px;
+    font-size: 22px;
+}
+
+/* parte 2 */
+
+.escritores{
+    width: 100%;
+    height: 1200px;
+}
+
+.titulo2 span{
+   display: flex;
+   justify-content: end;
+}
+
+.hr-3{
+    width: 60%;
+    margin-left: -5px;
+    margin-top: -19px;
+    
+}
+
+.hr-4{
+    width: 50%;
+    margin-left: -5px;
+
+}
+
+.titulo2 span{
+    font-size: 38px;
+}
+
+
+
+
+.imagens_linha1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.imagens_linha1 img{
+    border-radius: 10%;
+}
+
+.nomes_linha1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.textos_linha1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.textos_linha1 span{
+    width: 200px;
+}
+
+
+
+
+.imagens_linha2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.imagens_linha2 img{
+    border-radius: 10%;
+}
+
+.nomes_linha2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.textos_linha2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.textos_linha2 span{
+    width: 200px;
+}
+
+
+/* parte 3 */
+
+.importancia_livros{
+    width: 100%;
+    height: 1000px;
+    border: 2px solid red;
+}
+
+.titulo3{
+    width: 70%;
+    height: 300px;
+}
+
+.hr-5{
+    width: 60%;
+    margin-left: -5px;
+    margin-top: -19px;
+}
+
+.hr-6{
+    width: 50%;
+    margin-left: -5px;
+
+}
+.titulo3 span{
+    font-size: 38px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.texto1_parte3 {
+    width: 100%;
+    height: 450px;
+    border: 2px solid orangered;
+}
+
+.texto1_parte3 p { 
+    width: 540px;
+    font-size: 22px;
+    display: flex;
+    
+}
+
+.texto1_parte3{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+}

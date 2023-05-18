@@ -1,0 +1,87 @@
+body{
+    background-image: url(https://i.pinimg.com/736x/62/9c/a4/629ca47dd3de82029321ebdb17a76533.jpg);   
+}
+
+
+.corpo{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+.corpo img{
+    width: 220px;
+}
+
+.corpo p{
+    display: flex;
+    height: 450px;
+    width: 790px;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin-top: -240px;
+}
+
+
+p{
+    display: flex;
+    height: 400px;
+    font-size: 27px;
+    color: aliceblue;
+    margin-left: 20px;
+}
+
+.conteudo{
+    height: 630px;
+    width: 100%;
+    display: flex;
+}
+
+.botao{
+    height: 100%;
+    width: 480px;
+    display: flex;
+    justify-content: end;
+    margin-left: 20px;
+    background-color: rgb(85, 49, 49);
+    opacity: 0.8    ;
+    flex-direction: column;
+    align-items: center;
+}
+
+.botao button{
+    height: 80px;
+    width: 170px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    border-radius: 50px;
+    background-color: rgb(111, 26, 26);
+    color: white;
+    border: 2px solid rgb(192, 105, 105);
+    margin-bottom: 30px;
+}
+
+.botao button:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
+    background-color: #f06060;
+    opacity: 100%;
+    color: #000000;
+  }
+
+.botao p{
+    font-size: 300%;
+    font-family: 'Poltawski Nowy', serif;
+    display: flex;
+    text-align: center;
+}
+
+
+.botaodefato{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 80px;
+
+}

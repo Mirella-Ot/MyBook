@@ -51,15 +51,19 @@ header{
     color: #543633;
 }
 
+/* constainer */
+
 .container{
     width: 100%;
     height: 91vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    background-image: url("https://img.freepik.com/vektoren-kostenlos/im-alter-von-papier-textur-hintergrunddesign_60389-141.jpg?w=2000");
+    align-items:center;
+    background-image: url("https://img.freepik.com/vetores-premium/algumas-pessoas-lendo-livros-no-interior-da-sala-de-estar-de-casa_213110-915.jpg");
+    
 }
+
 
 .container div{
     display: flex;
@@ -70,72 +74,90 @@ header{
     
     display: flex;
     flex-direction: column;
-    height: 450px;
-    width: 300px;
+    height: 370px;
+    width: 350px;
     border: 2px solid black;
     border-radius: 8px;
-    padding: 20px;
-    background-color: #f2ebbf;
-    justify-content: center;
+    background-color: rgb(245, 232, 189);
     align-items: center;
-    border: 2px solid rgb(255, 231, 153);
-    box-shadow: 2px 4px 4px rgb(79, 78, 78);
+    border: 2px solid rgb(246, 220, 220);
+    box-shadow: 2px 2px 2px 2px rgb(128, 128, 128);
+
 }
 
 .caixa p {
+    padding-top: 30px;
     font-size: 18px;
     margin: 0;
-    margin-top: 10px;
     font-family:'Times New Roman', Times, serif;
 
 }
-
-.caixa a{
-    text-decoration: none;
-    color: #543633;
-    margin-top: 3%;
-}
-
+    
 .caixa input{
     width: 200px;
-    height: 36.5px;
+    height: 37px;
     display: flex;
     justify-content: center;
-    margin-top: 7.8px;
+    flex-direction: row;
+    margin-top: 18px;
     border-radius: 3px;
     border: none;
     background-color: transparent;
     border-bottom: 2px solid rgb(78, 56, 56);
+    margin-bottom: 35px;
+    
+    }
+
+.div_inputs{
+
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.div_inputs p{
+    
+    margin-left: 8px;
+    margin-right: 10px;
 }
 
 .caixa button{
-    margin-top: 20px;
+    margin-top: 5px;
     width: 103.5px;
+    margin-bottom: -15px;
     border-radius: 8px;
     border-color: rgb(255, 240, 240);
-    background-color:rgb(241, 231, 196);
+    background-color:rgb(255, 216, 216);
     box-shadow: 1px 1px rgb(65, 64, 64);
     font-family: 'Castoro Titling', cursive;
+    color: rgb(59, 48, 48);
+}
+
+.caixa a{
+    margin-bottom: 100px;
+    text-decoration: none;
+    color: #724a46;
+    
 }
 
 #titulo{
     height: 90px;
     font-size: 30px;
-    font-family: 'Cinzel', serif;
-    margin-bottom: 11px;
+    font-family: 'Lobster', cursive; 
+    color: #694341; 
 }
 
 /* footer */
 
 footer div{
-   width: 100%;
-   height: 32px;  
-   background-color:#f58873;
-   display: flex;
-   justify-content: center;
-   padding-top: 20px;
-   color: white;
-   font-weight: bold;
-   border-top: 2px solid rgb(242, 113, 113);
-   font-family:Arial, Helvetica, sans-serif;
-}
+    width: 100%;
+    height: 32px;  
+    background-color:#f58873;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    color: white;
+    font-weight: bold;
+    border-top: 2px solid rgb(242, 113, 113);
+    font-family:Arial, Helvetica, sans-serif;
+ }

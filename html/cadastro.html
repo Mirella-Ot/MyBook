@@ -4,8 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+    <title>MyBook | Cadastro</title>
     <link rel="stylesheet" href="../css/cadastro.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap" rel="stylesheet">
+    
 </head>
 <body>
 
@@ -17,10 +25,10 @@
             <div>
                 <ul>
                     <li>Início</li>
-                    <li>Sobre nós</li>
+                    <li>História</li>
                     <li> |  </li>
-                    <li>Cadastro</li>
-                    <li>Login</li>
+                    <li>Categoria</li>
+                    <li>Perfil</li>
                 </ul>
             </div>
         </div>
@@ -28,16 +36,38 @@
 
     <div class="container">
         <div class="caixa">
-
-            <p> Cadastre-se </p>
-            Nome completo: <input type="text" id="input_nome">
-            Telefone: <input type="number" id="input_telefone">
-            Email: <input type="email" id="input_email">    
-            Senha: <input type="password" id="input_senha">
-            Confirmação da senha: <input type="password" id="input_conf_senha">
+            
+           <h2 id="titulo"> Cadastre-se </h2>
+           <p> Nome completo: </p> <input id="input_nome"> 
+           <p> Telefone:</p> <input type="" id="input_telefone">
+           <p> Email:</p> <input type="email" id="input_email">    
+           <p> Senha:</p> <input type="password" id="input_senha">
+           <p>Confirmação da senha:</p> <input type="password" id="input_conf_senha">
+            <button onclick="cadastro()">Cadastrar</button>
+           <a href="../html/login.html" > <p>Já tem uma conta? Faça login!</p> </a>
         </div>
-
+        
     </div>
+    <footer>
+        <div>
+          MyBook-2023
+        </div>
+    </footer>
 
 </body>
 </html>
+<script>
+    function cadastro(){
+        var nome = input_nome.value;
+        var telefone = input_telefone.value;
+        var email = input_email.value;
+        var senha = input_senha.value;
+        var confirmacao_senha = input_conf_senha.value;
+
+        if (nome += " " || telefone != " " || email != " " || senha != " " || confirmacao_senha != " "){
+            
+            if()
+        } else {
+        }
+    }
+</script>
