@@ -46,8 +46,8 @@
                 <input type="email" id="input_email" placeholder="Seu email" >    
                 <input type="password" id="input_senha" placeholder="Sua senha">
             </div>
-            <button onclick="">Entrar</button>
-            <a href="../html/cadastro.html"> <p>Não tem uma conta? Cadastre-se!</p> </a>
+            <button onclick="entrar()">Entrar</button>
+            <a href="./cadastro.html"> <p>Não tem uma conta? Cadastre-se!</p> </a>
         </div>
         
         
@@ -61,4 +61,54 @@
 
 </body>
 </html>
-<script></script>
+<script>
+    function entrar() {
+
+        var email = input_email.value;
+        var senha = input_senha.value;
+
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: email,
+                senhaServer: senha
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nomeCompleto;
+                    sessionStorage.ID_USUARIO = json.idUsuario;
+
+                    setTimeout(function (){
+                        window.location = "./home.html";
+                    }, 1000);
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+             
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+</script>

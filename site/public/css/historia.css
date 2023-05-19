@@ -61,33 +61,33 @@ header{
 .slogan{
     width: 100%;
     height: 300px;
-    border: 2px solid red;
+    border: 2px solid rgb(210, 202, 202);
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 68px;
-    background-image: url(https://cdn.shopify.com/s/files/1/0305/4075/9177/products/papel-de-parede-texturizado-abstrato-tons-pasteis-alhambra-vc0502-681766.jpg?v=1643344795);
+    background-image: url(../imagens/e6419d885199bcd55faded23cf722a11.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .tempos_antigos{
-    height: 800px;
+    height: 1090px;
     width: 100%;
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
+    margin-top: 180px;
 }
 
 
 .titulo1 {
    height: 140px;
    width: 100%;
-   /* border: 2px solid rgb(0, 0, 0); */
-   /* margin-top: 13%; */
    margin-left: 15px;
+   margin-bottom: 50px;
 }
 
 .imagens-texto-1{
@@ -96,9 +96,16 @@ header{
     flex-direction: row;
     gap: 35px;
 }
+
+.imagens-texto-1 img{
+    border-radius: 5%;
+}
+
+
 .titulo1 span{
-    font-size: 38px;
+    font-size: 40px;
     margin-left: 170px;
+    font-family: 'Crimson Text', serif;
 }
 
 .hr-1{
@@ -124,6 +131,7 @@ header{
 .texto1 p{
     width: 35%;
     font-size: 23px;
+    font-family: 'Raleway', sans-serif;
 }
 
 #linhaVertical{
@@ -154,6 +162,7 @@ header{
 .texto2 p {
     width: 540px;
     font-size: 22px;
+    font-family: 'Raleway', sans-serif;
 }
 
 /* parte 2 */
@@ -161,15 +170,24 @@ header{
 .escritores{
     width: 100%;
     height: 1200px;
+    gap: 100px;
+    background-color: rgb(20, 19, 19);
+    color: white;
+}
+
+.titulo2{
+    height: 150px;
 }
 
 .titulo2 span{
    display: flex;
    justify-content: end;
+   margin-right: 60px;
+   color: white;
 }
 
 .hr-3{
-    width: 60%;
+    width: 55%;
     margin-left: -5px;
     margin-top: -19px;
     
@@ -205,6 +223,16 @@ header{
     justify-content: space-around;
 }
 
+
+.nomes_linha1 span{
+    display: flex;
+    text-align: center;
+    font-family: 'Scope One', serif; 
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
 .textos_linha1{
     display: flex;
     flex-direction: row;
@@ -212,7 +240,13 @@ header{
 }
 
 .textos_linha1 span{
-    width: 200px;
+    display: flex;
+    text-align: center;
+    font-family: 'Crimson Text', serif; 
+    font-size: 19px;
+    margin-top: 18px;
+    width: 250px;
+    margin-left: 7px;
 }
 
 
@@ -222,6 +256,7 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-top: 110px;
 }
 
 .imagens_linha2 img{
@@ -232,16 +267,25 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    font-family: 'Scope One', serif;
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: bold;
 }
+
 
 .textos_linha2 {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    text-align: center;
 }
 
 .textos_linha2 span{
-    width: 200px;
+    width: 250px;
+    font-family: 'Crimson Text', serif; 
+    font-size: 19px;
+    margin-top: 18px;
 }
 
 
@@ -250,12 +294,12 @@ header{
 .importancia_livros{
     width: 100%;
     height: 1000px;
-    border: 2px solid red;
 }
 
 .titulo3{
     width: 70%;
-    height: 300px;
+    height: 30px;
+    margin-top: 60px;
 }
 
 .hr-5{
@@ -279,7 +323,6 @@ header{
 .texto1_parte3 {
     width: 100%;
     height: 450px;
-    border: 2px solid orangered;
 }
 
 .texto1_parte3 p { 
@@ -294,3 +337,82 @@ header{
     justify-content: space-evenly;
     flex-direction: row-reverse;
 }
+
+.final{
+    height: 100px;
+
+}
+
+.texto p{
+
+    margin-left: 10%;
+    padding-top: 15%;
+    width: 500px;
+}
+
+.texto p img{
+
+    border-radius: 30px;
+}
+
+.texto .img1{
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-left: 1000px;
+    border-radius: 30px;
+}
+
+.texto .img2{
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-left: 700px;
+    border-radius: 30px;
+    
+
+}
+
+.final p {
+    font-size: 22px;
+    margin-top: -20px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.livros_texto {
+    width: 100%;
+    height: 650px;
+   
+}
+
+.livros_texto2 img{
+    margin-left: 827px;
+    margin-top: -209px
+}
+
+.livros_texto2 p{
+    font-size: 22px;
+    width: 700px;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* footer */
+
+footer div{
+    width: 100%;
+    height: 32px;  
+    background-color:#f58873;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    color: white;
+    font-weight: bold;
+    border-top: 2px solid rgb(242, 113, 113);
+    font-family:Arial, Helvetica, sans-serif;
+ }
+
+ #espaco{
+    height: 200px;
+ }

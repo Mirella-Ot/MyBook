@@ -43,7 +43,7 @@
            <p> Email:</p> <input type="email" id="input_email">    
            <p> Senha:</p> <input type="password" id="input_senha">
            <p>Confirmação da senha:</p> <input type="password" id="input_conf_senha">
-            <button onclick="cadastro()">Cadastrar</button>
+            <button onclick="cadastrar()">Cadastrar</button>
            <a href="../html/login.html" > <p>Já tem uma conta? Faça login!</p> </a>
         </div>
         
@@ -64,10 +64,56 @@
         var senha = input_senha.value;
         var confirmacao_senha = input_conf_senha.value;
 
-        if (nome += " " || telefone != " " || email != " " || senha != " " || confirmacao_senha != " "){
+        // if (nome += " " || telefone != " " || email != " " || senha != " " || confirmacao_senha != " "){
             
-            if()
-        } else {
-        }
+        //     if()
+        // } else {
+        // }
     }
+
+    function cadastrar() {
+
+        var nome = input_nome.value;
+        var telefone = input_telefone.value;
+        var email = input_email.value;
+        var senha = input_senha.value;
+        var confirmacao_senha = input_conf_senha.value;
+    
+
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nome,
+                telefoneServer: telefone,
+                emailServer: email,
+                senhaServer: senha
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                
+                setTimeout(() => {
+                    window.location = "login.html";
+                }, "2000")
+
+        
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+
+        return false;
+    }
+
 </script>
