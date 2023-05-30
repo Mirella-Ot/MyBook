@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="imagex/png" href="../imagens/rosa.png">
     <title>MyBook | Cadastro</title>
     <link rel="stylesheet" href="../css/cadastro.css">
 
@@ -35,7 +36,9 @@
            <p> Senha:</p> <input type="password" id="input_senha">
            <p>Confirmação da senha:</p> <input type="password" id="input_conf_senha">
             <button onclick="cadastrar()">Cadastrar</button>
+            <div id="mensagem_erro"></div>
            <a href="../html/login.html" > <p>Já tem uma conta? Faça login!</p> </a>
+
         </div>
         
     </div>
@@ -69,6 +72,42 @@
         var email = input_email.value;
         var senha = input_senha.value;
         var confirmacao_senha = input_conf_senha.value;
+
+
+        if (nome == "" || telefone == "" || email == "" || senha == "" || confirmacao_senha == "") {
+            // cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "Preencha todos os campos";
+
+            // finalizarAguardar();
+            return false;
+        }
+       
+
+    if(!email.includes("@")){
+        // cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "Seu email deve conter @";
+
+            // finalizarAguardar();
+            return false;
+    } else if(!senha.length >= 6){
+        // cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "Sua senha deve conter mais de 6 caracteres";
+
+            // finalizarAguardar();
+            return false;
+    } else if (confirmacao_senha != senha){
+        // cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "Sua senha não coincide com a confirmação";
+
+            // finalizarAguardar();
+            return false;
+    } else if (telefone.length != 11){
+        // cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "Seu telefone tem que conter 11 caracteres";
+
+            // finalizarAguardar();
+            return false;
+    }
     
 
 

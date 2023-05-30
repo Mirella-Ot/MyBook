@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="imagex/png" href="../imagens/rosa.png">
     <title>MyBook | Login</title>
     <link rel="stylesheet" href="../css/login.css">
     <script src="../js/funcoes.js"></script>
@@ -19,6 +20,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
     
+
 </head>
 <body>
 
@@ -70,17 +72,19 @@
 </body>
 </html>
 <script>
-  
+
   function entrar() {
+        
+
+
         aguardar();
 
         var emailVar = input_email.value;
         var senhaVar = input_senha.value;
 
         if (emailVar == "" || senhaVar == "") {
-            cardErro.style.display = "block"
+            
             mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-            finalizarAguardar();
             return false;
         }
         else {
@@ -101,7 +105,6 @@
             })
         }).then(function (resposta) {
             console.log("ESTOU NO THEN DO entrar()!")
-
             if (resposta.ok) {
                 console.log(resposta);
 
@@ -109,9 +112,9 @@
                     console.log(json);
                     console.log(JSON.stringify(json));
 
-                    sessionStorage.EMAIL_USUARIO = json.email;
-                    sessionStorage.NOME_USUARIO = json.nome;
-                    sessionStorage.ID_USUARIO = json.id;
+                    sessionStorage.EMAIL_USUARIO = JSON.email;
+                    sessionStorage.ID_USUARIO = JSON.id;
+                    sessionStorage.NOME_USUARIO = json.nomeCompleto
 
                     setTimeout(function () {
                         window.location = "home.html";

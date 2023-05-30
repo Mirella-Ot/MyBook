@@ -59,65 +59,38 @@ a{
     color: #543633;
 }
 
+
 /* body */
 
-.enquete{
-    height: 100%;
+body{
+   margin: 0%;
+   padding: 0%;
+
+}
+
+.container{
+    height: 650px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    background-image: url(../imagens/gif\ plano\ de\ fundo.gif);
-    background-size: cover;
-}   
+    align-items: center;
+    gap: 20px;
+
+}
 
 .caixa{
-   width: 40%;
-   height: 890px;
-   display: flex;
-   flex-direction: column;
-   margin-top: 50px;
-   align-items: center;
-   background-color: #BA5757;
-   border-radius: 2%;
-   margin-bottom: 50px;
-}
-
-#titulo{
-    width: 100%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 23px;
+    width: 75%;
+    height: 500px;
+    background-color: #f15e5e;
+    border-radius: 3%;
+    box-shadow: 5px 5px 10px rgb(114, 48, 48), 
+    0px 0 rgb(0, 0, 0);
     color: beige;
-    font-family: 'Josefin Sans', sans-serif;
 }
 
-.caixa span{
-    font-size: 34px;
-    margin-top: 30px;
+.container span{
+    font-size: 35px;
 }
-
-.caixa button{
-    margin-top: 28px;
-    width: 85%;
-    height: 6%;
-    cursor: pointer;
-    text-align: start;
-    background-color: #F28E8E;
-    border: none;
-    border-radius: 2%;
-    font-family: 'Merriweather', serif;
-    margin-bottom: 15px;
-}
-
-.caixa button:hover{
-    transform: scale(1.1);
-    transition: all 0.5s;
-    background-color: #f06060;
-    opacity: 100%;
-    color: #000000;
-  }
-
 
 /* footer */
 
@@ -137,4 +110,3 @@ footer div{
  #espaco{
     height: 200px;
  }
-

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="imagex/png" href="../imagens/rosa.png">
+    <title>MyBook | Enquete</title>
+    <link rel="stylesheet" href="../css/resultado.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    
+    <!-- header -->
+    <header>
+        <div class="logo">
+            <h1>MyBook</h1>
+        </div>
+        <div class="div_nav">
+            <div>
+                <ul>
+                    <a href="./home.html"><li>Início</li></a>
+                     <a href="./historia.html"><li>História</li></a>
+                     <li> |  </li>
+                     <a href="./categoria.html"><li>Categoria</li></a>
+                     <a href=""><li>Perfil</li></a>
+                 </ul>
+            </div>
+        </div>
+        </header>
+
+
+     <!-- body -->
+
+        <div class="container">
+            <span>Aqui está os resultados da enquete!</span>
+
+            <div class="caixa">
+
+                <canvas id="myChart"></canvas>
+                
+            </div>
+
+        </div>
+
+       
+
+
+
+
+     <!-- footer -->
+        <footer>
+            <div>
+              MyBook-2023
+            </div>
+        </footer>
+
+</body>
+</html>
+
+<script>
+
+    const ctx = document.getElementById('myChart');
+  
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Romance', 'Ficção', 'Biografia', 'Suspense', 'Fantasia', 'Terror', 'Aventura', 'Mistério', 'Outros'],
+        datasets: [{
+          label: 'Porcentagem de votos  ',
+          data: [12, 19, 3, 5, 2, 3, 30, 40, 2],
+          backgroundColor: [
+            '#198AD466',
+            'rgba(255, 159, 64, 0.2)',
+            'rgba(255, 205, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+          ],
+          borderColor: [
+            '#198AD4',
+            'rgb(255, 159, 64)',
+            'rgb(255, 205, 86)',
+            'rgb(75, 192, 192)',
+            'rgb(54, 162, 235)',
+            'rgb(153, 102, 255)',
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        },
+        indexAxis: 'y'
+      }
+    });
+  </script>

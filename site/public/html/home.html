@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="imagex/png" href="../imagens/rosa.png">
     <title>MyBook | Início</title>
     <link rel="stylesheet" href="../css/home.css">
     <script src="../html/carrosel.js" defer></script>
@@ -30,7 +31,7 @@
                 <a href="./historia.html"><li>História</li></a>
                 <li> |  </li>
                 <a href="categoria.html"><li>Categoria</li></a>
-                <a href=""><li>Perfil</li></a>
+                <li id="ola_nome">Olá, </li>
             </ul>
         </div>
     </div>
@@ -242,6 +243,10 @@
 </body>
 </html>
 <script>
+
+    var nomeUsuario = sessionStorage.getItem('NOME_USUARIO');
+    ola_nome.innerHTML += nomeUsuario;
+
     function participar(){
         window.location = "enquete.html"
     }

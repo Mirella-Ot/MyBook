@@ -16,6 +16,12 @@ header{
     color: #543633;
 }
 
+a{
+    text-decoration: none;
+    color: #543633;
+  
+  }
+
 
 .div_nav{
     /* width: 100%; */
