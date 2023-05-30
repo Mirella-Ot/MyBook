@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyBook | Login</title>
     <link rel="stylesheet" href="../css/login.css">
+    <script src="../js/funcoes.js"></script>
+
 
     <!-- fontes -->
 <!-- 
@@ -24,17 +26,7 @@
         <div class="logo">
             <h1>MyBook</h1>
         </div>
-        <div class="div_nav">
-            <div>
-                <ul>
-                    <li>Início</li>
-                    <li>História</li>
-                    <li> |  </li>
-                    <li>Categoria</li>
-                    <li>Perfil</li>
-                </ul>
-            </div>
-        </div>
+        
 </header>
 
     <div class="container">
@@ -59,14 +51,44 @@
         </div>
     </footer>
 
+    
+    <div class="login">
+        <div class="alerta_erro">
+            <div class="card_erro" id="cardErro">
+                <span id="mensagem_erro"></span>
+            </div>
+
+            </div>
+
+    <div id="div_aguardar" class="loading-div">
+    </div>
+
+
+    <div id="div_erros_login"></div>
+
+
 </body>
 </html>
 <script>
-    function entrar() {
+  
+  function entrar() {
+        aguardar();
 
-        var email = input_email.value;
-        var senha = input_senha.value;
+        var emailVar = input_email.value;
+        var senhaVar = input_senha.value;
 
+        if (emailVar == "" || senhaVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
 
         fetch("/usuarios/autenticar", {
             method: "POST",
@@ -74,8 +96,8 @@
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                emailServer: email,
-                senhaServer: senha
+                emailServer: emailVar,
+                senhaServer: senhaVar
             })
         }).then(function (resposta) {
             console.log("ESTOU NO THEN DO entrar()!")
@@ -88,12 +110,12 @@
                     console.log(JSON.stringify(json));
 
                     sessionStorage.EMAIL_USUARIO = json.email;
-                    sessionStorage.NOME_USUARIO = json.nomeCompleto;
-                    sessionStorage.ID_USUARIO = json.idUsuario;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
 
-                    setTimeout(function (){
-                        window.location = "./home.html";
-                    }, 1000);
+                    setTimeout(function () {
+                        window.location = "home.html";
+                    }, 1000); // apenas para exibir o loading
 
                 });
 
@@ -101,7 +123,10 @@
 
                 console.log("Houve um erro ao tentar realizar o login!");
 
-             
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
             }
 
         }).catch(function (erro) {
@@ -110,5 +135,10 @@
 
         return false;
     }
+
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
+
 
 </script>

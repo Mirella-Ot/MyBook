@@ -1,0 +1,135 @@
+/* header */
+
+body{
+    padding: 0%;
+    margin: 0%;
+    background-color: #f2ebbf;
+    
+}
+
+header{
+    height: 9vh;
+    border-bottom: 2px solid #f15e5e;
+    display: flex;
+    justify-content: space-between;
+    background-color: #f79a87;
+    color: #543633;
+}
+
+
+.div_nav{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.div_nav ul{
+    display: flex;
+    flex-direction: row;
+    gap:32px;
+    font-size: 18px;
+    list-style: none;
+    padding: 0%;
+}
+
+.div_nav div{
+
+    width: 700px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo{
+    width: 200px;
+    text-align: center;
+}
+
+.logo h1{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    height: 20px;
+    width: 500px;
+    padding-left: 15%;
+    color: #543633;
+}
+
+/* body */
+
+.enquete{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: url(../imagens/gif\ plano\ de\ fundo.gif);
+    background-size: cover;
+}   
+
+.caixa{
+   width: 40%;
+   height: 890px;
+   display: flex;
+   flex-direction: column;
+   margin-top: 50px;
+   align-items: center;
+   background-color: #BA5757;
+   border-radius: 2%;
+   margin-bottom: 50px;
+}
+
+#titulo{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 23px;
+    color: beige;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.caixa span{
+    font-size: 34px;
+    margin-top: 30px;
+}
+
+.caixa button{
+    margin-top: 28px;
+    width: 85%;
+    height: 6%;
+    cursor: pointer;
+    text-align: start;
+    background-color: #F28E8E;
+    border: none;
+    border-radius: 2%;
+    font-family: 'Merriweather', serif;
+    margin-bottom: 15px;
+}
+
+.caixa button:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
+    background-color: #f06060;
+    opacity: 100%;
+    color: #000000;
+  }
+
+
+/* footer */
+
+footer div{
+    /* width: 100%; */
+    height: 32px;  
+    background-color:#f58873;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    color: white;
+    font-weight: bold;
+    border-top: 2px solid rgb(242, 113, 113);
+    font-family:Arial, Helvetica, sans-serif;
+ }
+
+ #espaco{
+    height: 200px;
+ }
+

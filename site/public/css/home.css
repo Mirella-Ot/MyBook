@@ -1,21 +1,484 @@
+/* HEARDER */
+
+header{
+  height: 9vh;
+  border-bottom: 2px solid #f15e5e;
+  display: flex;
+  justify-content: center;
+  background-color: #f79a87;
+  color: #543633;
+}
+
+a{
+
+  text-decoration: none;
+  color: #543633;
+}
+.div_nav{
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.div_nav ul{
+  display: flex;
+  flex-direction: row;
+  gap:32px;
+  font-size: 18px;
+  list-style: none;
+  padding: 0%;
+}
+
+.div_nav div{
+
+  width: 700px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.logo{
+  width: 200px;
+  text-align: center;
+}
+
+.logo h1{
+  text-align: center;
+  display: flex;
+  align-items: center;
+  height: 20px;
+  width: 500px;
+  padding-left: 15%;
+  color: #543633;
+  margin-left: 20px;
+}
+
+
+/* BODY */
+
+
 body{
+  padding: 0%;
+  margin: 0%;
+  background-color: #f2ebbf;
+  background-image: url(../imagens/plano\ de\ fundo\ inicio.jpg);
   
 }
+
+.container, .slogan{
+  display: flex;
+  width: 100%;
+  height: 350px;
+  border: 2px solid rgb(93, 93, 68);
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://static.vecteezy.com/ti/vetor-gratis/p3/10742873-fundo-preto-com-glitter-lindo-brilho-feito-de-gratis-vetor.jpg);
+  background-size: cover;
+  color: antiquewhite;
+  
+}
+
+.container, .slogan p{
+  font-size: 60px;
+  text-shadow: 0.1em 0.1em #000000
+}
+
+
+.titulo_card{
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;
+}
+
+.titulo_card p{
+  font-size: 35px;
+  color: white;
+}
+
+.linhaHr1{
+  width: 100%;
+  color: #000000;
+}
+
+.hr1{
+  width: 700px;
+  display: flex;
+  margin-right: 900px;
+}
+
+
+.hr2{
+  width: 400px;
+  display: flex;
+  margin-right: 1100px;
+}
+
+.generos{
+  width: 100%;
+  height: 160px;
+  
+}
+
+#titulo_genero{
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  gap: 20px;
+  font-family: 'Abril Fatface', cursive;
+  margin-top: -20px;
+  color: white;
+  text-shadow: 0.1em 0.1em #000000;
+  opacity: 0.6;
+  background-color: #2d1215;
+}
+
+.hr3{
+  width: 700px;
+  margin-left: 650px;
+}
+
+.hr4{
+  width: 400px;
+  margin-left: 950px;
+}
+
+.box{
+  width: 100%;
+  height: 600px;
+  
+}
+
+/* box1 */
+
+.box1{
+  width: 95%;
+  height: 580px;
+  margin-left: 3%;
+  display: flex;
+  flex-direction: row;
+  gap: 140px;
+  background-color: #262d3b;
+  color:bisque;
+  border-radius: 1.9%;
+  box-shadow: 5px 5px 1px 1px #171c24;
+}
+
+.genero_narrativo{
+  width: 22%;
+  height: 360px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  margin-left: 240px;
+  margin-top: 90px;
+  flex-direction: column;
+  text-align: center;
+  gap: 37px;
+  background-color: #7ba69c;
+  border-radius: 2%;
+  box-shadow: 7px 7px 1px 1px #61847b;
+}
+
+.genero_narrativo span{
+  font-size: 24px;
+  margin-top: -10px;
+  font-weight: bold;
+}
+
+.genero_narrativo p{
+  width: 240px;
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  margin-left: 19px;
+}
+
+
+.tipos_narrativo{
+  width: 40%;
+  margin-top: 20px;
+}
+
+#title_narrativo{
+  margin-bottom: 48px;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.tipos_narrativo p{
+  font-size: 17.5px;
+  margin-bottom: 15px;
+}
+
+.tipos_narrativo span{
+  margin-bottom: -10px;
+}
+
+
+#span_narrativo {
+  font-size: 18.5px;
+  font-weight: bold;
+  
+}
+
+
+/* box2 */
+
+
+
+.box2{
+  width: 95%;
+  height: 620px;
+  margin-left: 3%;
+  display: flex;
+  flex-direction: row;
+  gap: 190px;
+  background-color: #733339;
+  color:bisque;
+  border-radius: 1.9%;
+  box-shadow: 5px 5px 1px 1px #2d1215;
+  margin-bottom: 20px;
+}
+
+.genero_narrativo2 {
+  width: 22%;
+  height: 360px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
+  flex-direction: column;
+  text-align: center;
+  gap: 37px;
+  background-color: #a8586f;
+  border-radius: 2%;
+  box-shadow: 7px 7px 1px 1px #7a253d;
+}
+
+.genero_narrativo2 span{
+  font-size: 24px;
+  margin-top: -10px;
+  font-weight: bold;
+}
+
+.genero_narrativo2 p{
+  width: 240px;
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  margin-left: 19px;
+}
+
+
+.tipos_narrativo2{
+  width: 40%;
+  margin-top: 20px;
+  margin-left: 120px;
+}
+
+#title_narrativo2{
+  margin-bottom: 48px;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.tipos_narrativo2 p{
+  font-size: 17.5px;
+  margin-bottom: 15px;
+}
+
+.tipos_narrativo2 span{
+  margin-bottom: -10px;
+}
+
+
+#span_narrativo2 {
+  font-size: 18.5px;
+  font-weight: bold;
+  
+}
+
+/* box3 */
+
+.box3{
+  width: 95%;
+  height: 595px;
+  margin-left: 3%;
+  display: flex;
+  flex-direction: row;
+  gap: 140px;
+  background-color: #ab6a58;
+  color:bisque;
+  border-radius: 1.9%;
+  box-shadow: 5px 5px 1px 1px #825143;
+}
+
+.genero_narrativo3{
+  width: 22%;
+  height: 360px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  margin-left: 240px;
+  margin-top: 90px;
+  flex-direction: column;
+  text-align: center;
+  gap: 37px;
+  background-color: #aa8074;
+  border-radius: 2%;
+  box-shadow: 7px 7px 1px 1px #73554c;
+}
+
+.genero_narrativo3 span{
+  font-size: 24px;
+  margin-top: -10px;
+  font-weight: bold;
+}
+
+.genero_narrativo3 p{
+  width: 225px;
+  display: flex;
+  justify-content: center;
+  font-size: 19px;
+  margin-left: 26px;
+}
+
+
+.tipos_narrativo3{
+  width: 40%;
+  margin-top: 20px;
+}
+
+#title_narrativo3{
+  margin-bottom: 48px;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.tipos_narrativo3 p{
+  font-size: 17.5px;
+  margin-bottom: 15px;
+}
+
+.tipos_narrativo3 span{
+  margin-bottom: -10px;
+}
+
+
+#span_narrativo3 {
+  font-size: 18.5px;
+  font-weight: bold;
+  
+}
+
+/* container 2 */
+
+.container2 {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items:center ;
+}
+
+.enquete{
+  width: 70%;
+  height: 350px;
+  border: 2px solid rgb(65, 41, 68);
+  background-color: rgb(74, 48, 74);
+  display: flex;
+  justify-content: center;
+  opacity: 0.8;
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
+}
+
+.enquete span{
+  font-size: 40px;
+  margin-top: 20px;
+  font-family: 'Abril Fatface', cursive;
+  color: whitesmoke;
+  
+}
+
+.enquete button{
+  height: 50px;
+  width: 150px;
+  font-size: 20px;
+  border-radius: 8%;
+  border: none;
+  background-color: #5e739c;
+  font-weight: bold;
+  color: #10141c;
+  cursor: pointer;
+
+}
+
+
+/* footer */
+
+footer div{
+  width: 100%;
+  height: 32px;  
+  background-color:#f58873;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  color: white;
+  font-weight: bold;
+  border-top: 2px solid rgb(242, 113, 113);
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+#espaco{
+  height: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
 .carrossel{
   box-shadow: 2px 2px 4px black;
   overflow: hidden;
-  height: 100%;
+  height: 400px;
   width: 100%;
+  margin-left: 25%;
 }
 
 .container{
   display: flex;
   transition: transform o.5s ease-in-out;
   transform: translateX(0);
+
 }
 
 img{
   object-fit: cover;
-  height: 500px;
-  width: 1000px;
-}
+  height: 440px;
+  width: 100%;
+} */
+
+
+/* hearder */
+

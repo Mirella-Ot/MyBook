@@ -18,7 +18,7 @@ header{
 
 
 .div_nav{
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     flex-direction: row-reverse;
 }
@@ -59,8 +59,8 @@ header{
 /* parte 1 */
 
 .slogan{
-    width: 100%;
-    height: 300px;
+    /* width: 100%; */
+    height: 350px;
     border: 2px solid rgb(210, 202, 202);
     display: flex;
     justify-content: center;
@@ -69,23 +69,23 @@ header{
     background-image: url(../imagens/e6419d885199bcd55faded23cf722a11.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Abril Fatface', cursive;
 }
 
 .tempos_antigos{
     height: 1090px;
-    width: 100%;
-    /* border: 2px solid blue; */
+    /* width: 100%; */
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
-    margin-top: 180px;
+    margin-top: 160px;
 }
 
 
 .titulo1 {
    height: 140px;
-   width: 100%;
+   /* width: 100%; */
    margin-left: 15px;
    margin-bottom: 50px;
 }
@@ -144,12 +144,13 @@ header{
 }
 
 .texto2 {
-    width: 100%;
+    /* width: 100%; */
     height: 900px;
     display: flex;
     justify-content: end;
     margin-top: 130px;
     gap: 160px;
+    margin-left: 200px;
 }
 
 .texto2 img{
@@ -168,7 +169,7 @@ header{
 /* parte 2 */
 
 .escritores{
-    width: 100%;
+    /* width: 100%; */
     height: 1200px;
     gap: 100px;
     background-color: rgb(20, 19, 19);
@@ -292,7 +293,7 @@ header{
 /* parte 3 */
 
 .importancia_livros{
-    width: 100%;
+    /* width: 100%; */
     height: 1000px;
 }
 
@@ -321,7 +322,7 @@ header{
 }
 
 .texto1_parte3 {
-    width: 100%;
+    /* width: 100%; */
     height: 450px;
 }
 
@@ -382,14 +383,14 @@ header{
 }
 
 .livros_texto {
-    width: 100%;
+    /* width: 100%; */
     height: 650px;
    
 }
 
 .livros_texto2 img{
     margin-left: 827px;
-    margin-top: -209px
+    margin-top: -259px
 }
 
 .livros_texto2 p{
@@ -401,7 +402,7 @@ header{
 /* footer */
 
 footer div{
-    width: 100%;
+    /* width: 100%; */
     height: 32px;  
     background-color:#f58873;
     display: flex;

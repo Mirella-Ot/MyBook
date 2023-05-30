@@ -1,0 +1,42 @@
+body{
+    margin: 0%;
+    padding: 0%;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+}
+
+.conteudo{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   /* justify-content: center;
+   align-items: center; */
+   margin-left: 20px;
+}
+
+.livro{
+    margin-top: 20px;
+    height: 100%;
+    width: 70%;
+    border:  solid red 2px;
+    display: flex;
+    justify-self: center;
+}
+
+.livro p {
+    margin-left: 20px;
+}
+
+.livro span{
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.imgLivro img{
+    width: 220px;
+    height: 320px;
+    padding: 0.5rem;
+}
