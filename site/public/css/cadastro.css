@@ -134,6 +134,12 @@ input:focus{
     margin-bottom: 11px;
 }
 
+#mensagem_erro{
+    margin-top: 10px;
+    color: red;
+    font-size: 15px;
+}
+
 /* footer */
 
 footer div{

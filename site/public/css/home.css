@@ -52,6 +52,24 @@ a{
   margin-left: 20px;
 }
 
+#ola_nome{
+  font-weight: bold;
+}
+
+#sair{
+  font-weight: bold;
+}
+
+#lista li:hover{
+  opacity: 100%;
+  color: #ffd7c1;
+}
+
+#sair li:hover{
+  opacity: 100%;
+  color: #ffd7c1;
+}
+
 
 /* BODY */
 
@@ -68,7 +86,6 @@ body{
   display: flex;
   width: 100%;
   height: 350px;
-  border: 2px solid rgb(93, 93, 68);
   justify-content: center;
   align-items: center;
   background-image: url(https://static.vecteezy.com/ti/vetor-gratis/p3/10742873-fundo-preto-com-glitter-lindo-brilho-feito-de-gratis-vetor.jpg);
@@ -443,6 +460,7 @@ footer div{
 #espaco{
   height: 200px;
 }
+
 
 
 

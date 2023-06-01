@@ -60,6 +60,25 @@ a{
 }
 
 
+#ola_nome{
+    font-weight: bold;
+  }
+  
+  #sair{
+    font-weight: bold;
+  }
+  
+  #lista li:hover{
+    opacity: 100%;
+    color: #ffd7c1;
+  }
+  
+  #sair li:hover{
+    opacity: 100%;
+    color: #ffd7c1;
+  }
+
+
 /* body */
 
 body{

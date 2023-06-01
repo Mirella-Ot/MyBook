@@ -28,11 +28,13 @@
         <div class="div_nav">
             <div>
                 <ul>
-                    <li>Início</li>
-                    <li>História</li>
+                    <a href="./home.html" id="lista"><li>Início</li></a>
+                    <a href="./historia.html" id="lista"><li>História</li></a>
+                    <a href="./resultado.html" id="lista"><li>Enquete</li></a>
+                    <a href="categoria.html" id="lista"><li>Categoria</li></a>
                     <li> |  </li>
-                    <li>Categoria</li>
-                    <li>Perfil</li>
+                    <li id="ola_nome">Olá, </li>
+                    <a href="../index.html" id="sair"><li>Sair</li></a>
                 </ul>
             </div>
         </div>
@@ -49,15 +51,15 @@
 
             </div>
                 
-                <button>Romance</button>
-                <button>Ficção</button>
-                <button>Biografia</button>
-                <button>Suspense</button>
-                <button>Fantasia</button>
-                <button>Terror</button>
-                <button>Aventura</button>
-                <button>Mistério</button>
-                <button>Outros</button>
+                <button onclick="updateGenero('romance')">Romance</button>
+                <button onclick="updateGenero('ficcao')">Ficção</button>
+                <button onclick="updateGenero('biografia')">Biografia</button>
+                <button onclick="updateGenero('suspense')">Suspense</button>
+                <button onclick="updateGenero('fantasia')">Fantasia</button>
+                <button onclick="updateGenero('terror')">Terror</button>
+                <button onclick="updateGenero('aventura')">Aventura</button>
+                <button onclick="updateGenero('misterio')">Mistério</button>
+                <button onclick="updateGenero('outros')">Outros</button>
                 
             
         </div>
@@ -72,3 +74,27 @@
     
 </body>
 </html>
+
+<script>
+
+    var nomeUsuario = sessionStorage.getItem('NOME_USUARIO');
+    ola_nome.innerHTML += nomeUsuario;
+
+    function updateGenero(genero) {
+        fetch(`/medidas/updateGeneros/${genero}`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        }).then(function(response) {
+            if(response.ok) {
+                console.log(`De certo toma aqui sua resposta ${JSON.stringify(response)}`)
+            } else {
+                console.error("Algo deu muito ruim")
+            }
+        }).catch(function(error) {
+            console.error("DEU MUITO MAS MUITO RUIM", error)
+        })
+    }
+
+</script>

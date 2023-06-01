@@ -16,6 +16,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap" rel="stylesheet">
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 <body>
 
@@ -51,6 +62,7 @@
 </body>
 </html>
 <script>
+
     function cadastro(){
         var nome = input_nome.value;
         var telefone = input_telefone.value;
@@ -58,11 +70,6 @@
         var senha = input_senha.value;
         var confirmacao_senha = input_conf_senha.value;
 
-        // if (nome += " " || telefone != " " || email != " " || senha != " " || confirmacao_senha != " "){
-            
-        //     if()
-        // } else {
-        // }
     }
 
     function cadastrar() {
@@ -75,37 +82,36 @@
 
 
         if (nome == "" || telefone == "" || email == "" || senha == "" || confirmacao_senha == "") {
-            // cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "Preencha todos os campos";
-
-            // finalizarAguardar();
+            
+            Swal.fire('Preencha os campos vazios!')
+        
             return false;
+
         }
        
 
     if(!email.includes("@")){
-        // cardErro.style.display = "block"
+        
             mensagem_erro.innerHTML = "Seu email deve conter @";
 
-            // finalizarAguardar();
             return false;
-    } else if(!senha.length >= 6){
-        // cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "Sua senha deve conter mais de 6 caracteres";
 
-            // finalizarAguardar();
+    } else if(!senha.length >= 6){
+        
+            mensagem_erro.innerHTML = "Sua senha deve conter mais de 6 caracteres";
+            
             return false;
+
     } else if (confirmacao_senha != senha){
-        // cardErro.style.display = "block"
+       
             mensagem_erro.innerHTML = "Sua senha não coincide com a confirmação";
 
-            // finalizarAguardar();
             return false;
+
     } else if (telefone.length != 11){
-        // cardErro.style.display = "block"
+       
             mensagem_erro.innerHTML = "Seu telefone tem que conter 11 caracteres";
 
-            // finalizarAguardar();
             return false;
     }
     
@@ -125,11 +131,20 @@
                 emailServer: email,
                 senhaServer: senha
             })
-        }).then(function (resposta) {
+        })
+            .then(function (resposta) {
 
             console.log("resposta: ", resposta);
 
             if (resposta.ok) {
+
+                Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Cadastrado com sucesso',
+                showConfirmButton: false,
+                timer: 1500
+                })
                 
                 setTimeout(() => {
                     window.location = "login.html";

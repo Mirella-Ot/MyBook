@@ -8,7 +8,7 @@
     <title>MyBook | Login</title>
     <link rel="stylesheet" href="../css/login.css">
     <script src="../js/funcoes.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- fontes -->
 <!-- 
@@ -85,7 +85,10 @@
         if (emailVar == "" || senhaVar == "") {
             
             mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+
+            Swal.fire('Preencha os campos vazios!')
             return false;
+
         }
         else {
             setInterval(sumirMensagem, 5000)
@@ -116,6 +119,14 @@
                     sessionStorage.ID_USUARIO = JSON.id;
                     sessionStorage.NOME_USUARIO = json.nomeCompleto
 
+                    Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Login feito com sucesso!',
+                    showConfirmButton: false,
+                    timer: 1500
+                    })
+
                     setTimeout(function () {
                         window.location = "home.html";
                     }, 1000); // apenas para exibir o loading
@@ -125,6 +136,12 @@
             } else {
 
                 console.log("Houve um erro ao tentar realizar o login!");
+
+                Swal.fire({
+                icon: 'error',
+                title: 'Erro no login',
+                text: 'Algo deu errado ao tentar realizar o login',
+                })
 
                 resposta.text().then(texto => {
                     console.error(texto);
