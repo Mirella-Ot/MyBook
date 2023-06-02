@@ -64,7 +64,7 @@
 
   var idDashboard = 1
   obterDadosGrafico(idDashboard);
-// window.onload = obterDadosGrafico();
+window.onload = obterDadosGrafico();
 function obterDadosGrafico(idDashboard) {
   console.log(idDashboard);
 fetch(`/medidas/ultimas/${idDashboard}`).then(function (response) {
@@ -103,7 +103,7 @@ function plotarGrafico(resposta, idDashboard) {
 console.log('iniciando plotagem do gráfico...');
 
 // Criando estrutura para plotar gráfico - labels
-let labels = [];
+let labels = ['Romance', 'Ficcção', 'Biografia', 'Suspense', 'Fantasia', 'Terror', 'Aventura', 'Mistério', 'Outros'];
 
 // Criando estrutura para plotar gráfico - dados
 let dados = {
@@ -136,7 +136,8 @@ for (i = 0; i < resposta.length; i++) {
     dados.datasets[i].data.push(registro.aventura);
     dados.datasets[i].data.push(registro.misterio);
     dados.datasets[i].data.push(registro.outros);
-}
+
+} 
 
 console.log('----------------------------------------------')
 console.log('O gráfico será plotado com os respectivos valores:')
@@ -148,8 +149,15 @@ console.log('----------------------------------------------')
 
 // Criando estrutura para plotar gráfico - config
 const config = {
-    type: 'line',
+    type: 'bar',
     data: dados,
+    options: {
+ scales: {
+      y: { beginAtZero: true 
+      }
+      },
+     indexAxis: 'y'
+  }
 };
 
 // Adicionando gráfico criado em div na tela
@@ -174,42 +182,42 @@ fetch(`/dashboard/${idDashboard}`, { cache: 'no-store' }).then(function (respons
 }
 
 
-var ctx = document.getElementById('myChart');
-  var grafico = new myChart(ctx, {
-   type: 'bar',
-   data: {
-     labels: ['Romance', 'Ficção', 'Biografia', 'Suspense', 'Fantasia', 'Terror', 'Aventura', 'Mistério', 'Outros'],
-     datasets: [{
-       label: 'Porcentagem de votos  ',
-       data: [],
-       backgroundColor: [
-         '#198AD466',
-         'rgba(255, 159, 64, 0.2)',
-         'rgba(255, 205, 86, 0.2)',
-         'rgba(75, 192, 192, 0.2)',
-         'rgba(54, 162, 235, 0.2)',
-         'rgba(153, 102, 255, 0.2)',
-       ],
-       borderColor: [
-         '#198AD4',
-         'rgb(255, 159, 64)',
-         'rgb(255, 205, 86)',
-         'rgb(75, 192, 192)',
-         'rgb(54, 162, 235)',
-         'rgb(153, 102, 255)',
-       ],
-       borderWidth: 1
-     }]
-   },
-   options: {
-     scales: {
-       y: {
-         beginAtZero: true
-       }
-     },
-     indexAxis: 'y'
-   }
- });
+// var ctx = document.getElementById('myChart');
+//   var grafico = new myChart(ctx, {
+//    type: 'bar',
+//    data: {
+//      labels: ['Romance', 'Ficção', 'Biografia', 'Suspense', 'Fantasia', 'Terror', 'Aventura', 'Mistério', 'Outros'],
+//      datasets: [{
+//        label: 'Porcentagem de votos  ',
+//        data: [],
+//        backgroundColor: [
+//          '#198AD466',
+//          'rgba(255, 159, 64, 0.2)',
+//          'rgba(255, 205, 86, 0.2)',
+//          'rgba(75, 192, 192, 0.2)',
+//          'rgba(54, 162, 235, 0.2)',
+//          'rgba(153, 102, 255, 0.2)',
+//        ],
+//        borderColor: [
+//          '#198AD4',
+//          'rgb(255, 159, 64)',
+//          'rgb(255, 205, 86)',
+//          'rgb(75, 192, 192)',
+//          'rgb(54, 162, 235)',
+//          'rgb(153, 102, 255)',
+//        ],
+//        borderWidth: 1
+//      }]
+//    },
+//    options: {
+//      scales: {
+//        y: {
+//          beginAtZero: true
+//        }
+//      },
+//      indexAxis: 'y'
+//    }
+//  });
  
      
   </script>
