@@ -24,7 +24,7 @@
                   <a href="./home.html" id="lista"><li>Início</li></a>
                   <a href="./historia.html" id="lista"><li>História</li></a>
                   <a href="./resultado.html" id="lista"><li>Enquete</li></a>
-                  <a href="categoria.html" id="lista"><li>Categoria</li></a>
+                  <a href="../categoria.html/categoriaPag1.html" id="lista"><li>Categoria</li></a>
                   <li> |  </li>
                   <li id="ola_nome">Olá, </li>
                   <a href="../index.html" id="sair"><li>Sair</li></a>
@@ -36,8 +36,10 @@
 
      <!-- body -->
 
+     
+
         <div class="container">
-            <span>Aqui está os resultados da enquete!</span>
+            <span>Aqui estão os gêneros mais lidos de acordo com o público!</span>
 
             <div class="caixa">
 
@@ -45,7 +47,11 @@
                 
             </div>
 
+            <div id="participe">
+                <a href="./enquete.html"><p>Ainda não participou? Participe!</p></a>
+            </div>
         </div>
+        
 
      <!-- footer -->
         <footer>
@@ -110,6 +116,7 @@ let dados = {
     labels: labels,
     datasets: [{
       labels: ['Romance', 'Ficção', 'Biografia', 'Suspense', 'Fantasia', 'Terror', 'Aventura', 'Mistério', 'Outros'],
+      label: 'Quantidade de votos',
       data: [],
         fill: false,
         borderColor: 'rgb(75, 192, 192)',
@@ -181,43 +188,5 @@ fetch(`/dashboard/${idDashboard}`, { cache: 'no-store' }).then(function (respons
     });
 }
 
-
-// var ctx = document.getElementById('myChart');
-//   var grafico = new myChart(ctx, {
-//    type: 'bar',
-//    data: {
-//      labels: ['Romance', 'Ficção', 'Biografia', 'Suspense', 'Fantasia', 'Terror', 'Aventura', 'Mistério', 'Outros'],
-//      datasets: [{
-//        label: 'Porcentagem de votos  ',
-//        data: [],
-//        backgroundColor: [
-//          '#198AD466',
-//          'rgba(255, 159, 64, 0.2)',
-//          'rgba(255, 205, 86, 0.2)',
-//          'rgba(75, 192, 192, 0.2)',
-//          'rgba(54, 162, 235, 0.2)',
-//          'rgba(153, 102, 255, 0.2)',
-//        ],
-//        borderColor: [
-//          '#198AD4',
-//          'rgb(255, 159, 64)',
-//          'rgb(255, 205, 86)',
-//          'rgb(75, 192, 192)',
-//          'rgb(54, 162, 235)',
-//          'rgb(153, 102, 255)',
-//        ],
-//        borderWidth: 1
-//      }]
-//    },
-//    options: {
-//      scales: {
-//        y: {
-//          beginAtZero: true
-//        }
-//      },
-//      indexAxis: 'y'
-//    }
-//  });
- 
      
   </script>

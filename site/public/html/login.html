@@ -76,7 +76,6 @@
   function entrar() {
         
 
-
         aguardar();
 
         var emailVar = input_email.value;
@@ -115,9 +114,9 @@
                     console.log(json);
                     console.log(JSON.stringify(json));
 
-                    sessionStorage.EMAIL_USUARIO = JSON.email;
-                    sessionStorage.ID_USUARIO = JSON.id;
-                    sessionStorage.NOME_USUARIO = json.nomeCompleto
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.ID_USUARIO = json.idUsuario;
+                    sessionStorage.NOME_USUARIO = json.nomeCompleto;
 
                     Swal.fire({
                     position: 'top-end',

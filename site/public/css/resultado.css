@@ -87,29 +87,66 @@ body{
 
 }
 
+
 .container{
-    height: 650px;
+    height: 700px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
-
+    background-image: url(../imagens/gif\ plano\ de\ fundo.gif);
+    background-size: cover;
 }
 
 .caixa{
     width: 75%;
     height: 500px;
-    background-color: #f15e5e;
+    background-color: #c0e1d9;
     border-radius: 3%;
-    box-shadow: 5px 5px 10px rgb(114, 48, 48), 
+    box-shadow: 5px 5px 10px #516e67, 
     0px 0 rgb(0, 0, 0);
     color: beige;
 }
 
 .container span{
-    font-size: 35px;
+    font-size: 33px;
+    color: beige;
+    font-family: 'Josefin Sans', sans-serif;
+    text-shadow: 0.1em 0.1em #000000;
+    font-family: 'Abril Fatface', cursive;
 }
+
+
+#participe{
+   width: 50%;
+   height: 40px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #103178bb;
+   border-radius: 2%;
+   cursor: pointer;
+}
+
+#participe p{
+    font-size: 20px;
+    font-family: 'Abril Fatface', cursive;
+    font-weight: bolder;
+    color: beige;
+}
+
+
+#participe:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
+    opacity: 100%;
+    color: #001867;
+  }
+
+  
+
+
 
 /* footer */
 

@@ -441,6 +441,13 @@ body{
 
 }
 
+.enquete button:hover{
+  transform: scale(1.1);
+  transition: all 0.5s;
+  background-color: #7313ae;
+  color: #ffe0e0;
+}
+
 
 /* footer */
 
